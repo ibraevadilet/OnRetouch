@@ -9,7 +9,7 @@ class LifehackModel {
     required this.descriptionTexts,
   });
 
-  LifehackModel.fromJson(Map<String, dynamic> json) {
+  LifehackModel.fromJson(Map<dynamic, dynamic> json) {
     title = json['title'];
     image = json['image'];
     descriptionTexts = json['description_texts'].cast<String>();
