@@ -58,14 +58,14 @@ class CustomButton extends StatelessWidget {
                   icon != null
                       ? Image.asset(
                           icon!,
-                          width: 32,
+                          width: 20,
                         )
                       : SizedBox(),
                   SizedBox(width: icon != null ? 12 : 0),
                   Text(
                     text,
                     style: AppTextStyles.s19W700(
-                      color: textColor ?? Colors.white,
+                      color: textColor ?? AppColors.color38B6FFBlue,
                     ),
                   ),
                 ],

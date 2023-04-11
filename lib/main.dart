@@ -1,16 +1,19 @@
 // ignore_for_file: use_build_context_synchronously, use_key_in_widget_constructors
 
-import 'package:apphud/apphud.dart';
+// import 'package:apphud/apphud.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:on_retouch/feature/auth/splash_screen.dart';
+import 'package:on_retouch/widgets/buttom_navigator.dart';
 // import 'package:rate_my_app/rate_my_app.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'config/app_config.dart';
 import 'services/notification_service.dart';
+
 final scaffoldKey = GlobalKey<ScaffoldMessengerState>();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Apphud.start(apiKey: AppConfig.apphudKey);
+  // await Apphud.start(apiKey: AppConfig.apphudKey);
 
   await Firebase.initializeApp(
     options: const FirebaseOptions(
@@ -102,7 +105,7 @@ class _MyAppState extends State<MyApp> {
         splashFactory: NoSplash.splashFactory,
         highlightColor: Colors.transparent,
       ),
-      home: const Scaffold(),
+      home: SplashScreen(),
     );
   }
 }
