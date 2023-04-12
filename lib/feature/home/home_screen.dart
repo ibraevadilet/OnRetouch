@@ -14,6 +14,12 @@ class HomeScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) => GetLifeHacksCubit()..getLifeHacks(),
       child: Scaffold(
+        appBar: AppBar(
+          toolbarHeight: 0,
+          backgroundColor: Colors.white,
+          elevation: 0,
+        ),
+        backgroundColor: Colors.white,
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),

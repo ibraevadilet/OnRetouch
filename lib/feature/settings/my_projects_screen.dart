@@ -16,7 +16,7 @@ class MyProjectScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.white,
           leading: const BackButton(color: Colors.black),
           title: Text(
             "My projects",

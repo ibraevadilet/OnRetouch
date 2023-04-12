@@ -11,6 +11,8 @@ import 'package:on_retouch/widgets/buttom_navigator.dart';
 import 'package:on_retouch/widgets/custom_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../config/check_restore.dart';
+
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
 
@@ -134,8 +136,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   color: Colors.white.withOpacity(0.5),
                 ),
                 InkWell(
-                  onTap: () {},
-                  // => CheckRestore.checkRestore(context),
+                  onTap: () => CheckRestore.checkRestore(context),
                   child: Text(
                     'Restore',
                     style: AppTextStyles.s15W400(

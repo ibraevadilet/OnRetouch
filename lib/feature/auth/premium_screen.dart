@@ -1,3 +1,4 @@
+import 'package:apphud/apphud.dart';
 import 'package:flutter/material.dart';
 import 'package:on_retouch/config/app_config.dart';
 import 'package:on_retouch/config/check_premium.dart';
@@ -7,6 +8,8 @@ import 'package:on_retouch/core/app_text_styles.dart';
 import 'package:on_retouch/web_view_screen.dart';
 import 'package:on_retouch/widgets/buttom_navigator.dart';
 import 'package:on_retouch/widgets/custom_button.dart';
+
+import '../../config/check_restore.dart';
 
 class PremiumScreen extends StatelessWidget {
   const PremiumScreen({super.key, this.isPop = false});
@@ -82,13 +85,23 @@ class PremiumScreen extends StatelessWidget {
                 text: 'Buy Premium for \$1.99',
                 textColor: AppColors.color38B6FFBlue,
                 onPressed: () async {
-                  await CheckPremium.setSubscription();
-                  Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const BottomNavigatorScreen(),
-                    ),
-                    (protected) => false,
+                  var paywalls = await Apphud.paywalls();
+                  await Apphud.purchase(
+                    product: paywalls?.paywalls.first.products!.first,
+                  ).whenComplete(
+                    () async {
+                      if (await Apphud.hasActiveSubscription() ||
+                          await Apphud.hasPremiumAccess()) {
+                        await CheckPremium.setSubscription();
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const BottomNavigatorScreen(),
+                          ),
+                          (route) => false,
+                        );
+                      }
+                    },
                   );
                 },
               ),
@@ -122,8 +135,7 @@ class PremiumScreen extends StatelessWidget {
                       color: Colors.white.withOpacity(0.5),
                     ),
                     InkWell(
-                      onTap: () {},
-                      // => CheckRestore.checkRestore(context),
+                      onTap: () => CheckRestore.checkRestore(context),
                       child: Text(
                         'Restore',
                         style: AppTextStyles.s15W400(

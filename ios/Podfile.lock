@@ -1,4 +1,8 @@
 PODS:
+  - apphud (2.2.14):
+    - ApphudSDK (= 2.8.8)
+    - Flutter
+  - ApphudSDK (2.8.8)
   - Firebase/CoreOnly (10.6.0):
     - FirebaseCore (= 10.6.0)
   - Firebase/Database (10.6.0):
@@ -145,6 +149,7 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - apphud (from `.symlinks/plugins/apphud/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - firebase_database (from `.symlinks/plugins/firebase_database/ios`)
   - firebase_messaging (from `.symlinks/plugins/firebase_messaging/ios`)
@@ -167,6 +172,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - ApphudSDK
     - Firebase
     - FirebaseAppCheckInterop
     - FirebaseAuthInterop
@@ -190,6 +196,8 @@ SPEC REPOS:
     - SDWebImageWebPCoder
 
 EXTERNAL SOURCES:
+  apphud:
+    :path: ".symlinks/plugins/apphud/ios"
   firebase_core:
     :path: ".symlinks/plugins/firebase_core/ios"
   firebase_database:
@@ -230,6 +238,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
 
 SPEC CHECKSUMS:
+  apphud: ce489282564a903ab7349992c08f17eb4eb52825
+  ApphudSDK: ef62166ff111404f1fa01a4cd4552d266b778565
   Firebase: f13680471b021937f2230ea8503c7809d8c29806
   firebase_core: 58542d7399889ebdbb034baa72d081e54c5c814d
   firebase_database: bebecb0e8ddfb1d46a22e51219d48f6ee2e9563b
@@ -244,7 +254,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 59c0e4c7a816a0f76710d83f77e5369b3e45eb96
   FirebaseMessaging: fd93783258c53ae5cdb9b41bf0c51606a677f2d5
   FirebaseStorage: 10d4f43a4ef98e7554da72197ad52216686ea990
-  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   flutter_image_compress: 5a5e9aee05b6553048b8df1c3bc456d0afaac433
   flutter_local_notifications: 0c0b1ae97e741e1521e4c1629a459d04b9aec743
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a

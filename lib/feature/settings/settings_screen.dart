@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:on_retouch/config/app_config.dart';
 import 'package:on_retouch/config/check_premium.dart';
+import 'package:on_retouch/config/check_restore.dart';
 import 'package:on_retouch/core/app_colors.dart';
 import 'package:on_retouch/core/app_images.dart';
 import 'package:on_retouch/core/app_text_styles.dart';
@@ -87,7 +88,7 @@ class SettingsScreen extends StatelessWidget {
               WidgetSettingsRow(
                 icon: AppImages.restoreIcon,
                 text: 'Restore',
-                onTap: () {},
+                onTap: () => CheckRestore.checkRestore(context),
               ),
               const SizedBox(height: 25),
               FutureBuilder(

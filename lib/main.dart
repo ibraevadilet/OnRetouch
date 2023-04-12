@@ -4,7 +4,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:on_retouch/feature/auth/splash_screen.dart';
-import 'package:on_retouch/widgets/buttom_navigator.dart';
 // import 'package:rate_my_app/rate_my_app.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'config/app_config.dart';
