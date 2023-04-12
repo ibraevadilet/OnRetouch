@@ -91,56 +91,56 @@ class SettingsScreen extends StatelessWidget {
               ),
               const SizedBox(height: 25),
               FutureBuilder(
-                  future: CheckPremium.getSubscription(),
-                  builder: (context, AsyncSnapshot<bool?> snapshot) {
-                    if (snapshot.hasData) {
-                      if (snapshot.data!) {
-                        return const SizedBox();
-                      }
+                future: CheckPremium.getSubscription(),
+                builder: (context, AsyncSnapshot<bool?> snapshot) {
+                  if (snapshot.hasData) {
+                    if (snapshot.data!) {
+                      return const SizedBox();
                     }
-                    return InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const PremiumScreen(isPop: true),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        height: 45,
-                        decoration: BoxDecoration(
-                            color: AppColors.color38B6FFBlue,
-                            borderRadius: BorderRadius.circular(5)),
-                        child: Row(
-                          children: [
-                            const SizedBox(width: 20),
-                            Image.asset(
-                              AppImages.crownGoldIcon,
-                              width: 20,
-                            ),
-                            const SizedBox(width: 10),
-                            Text(
-                              "Buy Premium for \$1.99",
-                              style: AppTextStyles.s15W400(color: Colors.white),
-                            ),
-                            const Spacer(),
-                            const Icon(
-                              Icons.chevron_right,
-                              color: Colors.white,
-                            ),
-                            const SizedBox(width: 10),
-                          ],
+                  }
+                  return InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const PremiumScreen(isPop: true),
                         ),
+                      );
+                    },
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          color: AppColors.color38B6FFBlue,
+                          borderRadius: BorderRadius.circular(5)),
+                      child: Row(
+                        children: [
+                          const SizedBox(width: 20),
+                          Image.asset(
+                            AppImages.crownGoldIcon,
+                            width: 20,
+                          ),
+                          const SizedBox(width: 10),
+                          Text(
+                            "Buy Premium for \$1.99",
+                            style: AppTextStyles.s15W400(color: Colors.white),
+                          ),
+                          const Spacer(),
+                          const Icon(
+                            Icons.chevron_right,
+                            color: Colors.white,
+                          ),
+                          const SizedBox(width: 10),
+                        ],
                       ),
-                    );
-                  })
+                    ),
+                  );
+                },
+              )
             ],
           ),
         ),
       ),
     );
-    ;
   }
 }

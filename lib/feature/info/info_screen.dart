@@ -32,6 +32,7 @@ class InfoScreen extends StatelessWidget {
                 Image.asset(AppImages.info5),
                 const SizedBox(height: 25),
                 Image.asset(AppImages.info2),
+                const SizedBox(height: 25),
               ],
             ),
           ),
