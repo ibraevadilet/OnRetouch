@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:on_retouch/config/app_config.dart';
-import 'package:on_retouch/config/check_premium.dart';
-import 'package:on_retouch/config/check_restore.dart';
+import 'package:on_retouch/utils/premium.dart';
 import 'package:on_retouch/core/app_colors.dart';
 import 'package:on_retouch/core/app_images.dart';
 import 'package:on_retouch/core/app_text_styles.dart';
@@ -9,6 +7,8 @@ import 'package:on_retouch/feature/auth/premium_screen.dart';
 import 'package:on_retouch/feature/settings/my_projects_screen.dart';
 import 'package:on_retouch/feature/settings/widget/widget_settings_row.dart';
 import 'package:on_retouch/web_view_screen.dart';
+
+import '../../utils/restore.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);
@@ -48,7 +48,7 @@ class SettingsScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const WebViewScreen(
-                        url: AppConfig.privacyPolicy,
+                        url: 'https://docs.google.com/document/d/1Y-WYTg-5d7yykd0ttWFp3A0qWLOcozik7IVRVMdX8wM/edit?usp=sharing',
                         title: "Privacy Policy",
                       ),
                     ),
@@ -63,7 +63,7 @@ class SettingsScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const WebViewScreen(
-                        url: AppConfig.termOfUse,
+                        url: 'https://docs.google.com/document/d/13psrnVU4DvX4S6YC21fmtD7ABG_Z57yDwTKNyhalqrE/edit?usp=sharing',
                         title: "Terms of Use",
                       ),
                     ),
@@ -78,7 +78,7 @@ class SettingsScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const WebViewScreen(
-                        url: AppConfig.supportForm,
+                        url: 'https://sites.google.com/view/travlin/support-form',
                         title: "Support",
                       ),
                     ),

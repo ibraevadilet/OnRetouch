@@ -13,7 +13,7 @@ import 'package:gallery_saver/gallery_saver.dart';
 import 'package:hand_signature/signature.dart';
 import 'package:image/image.dart' as img;
 import 'package:image_editor/image_editor.dart' as image_editor;
-import 'package:on_retouch/config/check_premium.dart';
+import 'package:on_retouch/utils/premium.dart';
 import 'package:on_retouch/core/app_colors.dart';
 import 'package:on_retouch/core/app_text_styles.dart';
 import 'package:on_retouch/feature/auth/premium_screen.dart';

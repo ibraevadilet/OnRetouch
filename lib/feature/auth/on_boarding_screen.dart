@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:on_retouch/config/app_config.dart';
-import 'package:on_retouch/config/check_premium.dart';
+import 'package:on_retouch/utils/premium.dart';
 import 'package:on_retouch/core/app_colors.dart';
 import 'package:on_retouch/core/app_images.dart';
 import 'package:on_retouch/core/app_text_styles.dart';
@@ -10,8 +9,7 @@ import 'package:on_retouch/web_view_screen.dart';
 import 'package:on_retouch/widgets/buttom_navigator.dart';
 import 'package:on_retouch/widgets/custom_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
-import '../../config/check_restore.dart';
+import 'package:on_retouch/utils/restore.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -118,7 +116,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const WebViewScreen(
-                          url: AppConfig.termOfUse,
+                          url: 'https://docs.google.com/document/d/13psrnVU4DvX4S6YC21fmtD7ABG_Z57yDwTKNyhalqrE/edit?usp=sharing',
                           title: "Terms of Use",
                         ),
                       ),
@@ -154,7 +152,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const WebViewScreen(
-                          url: AppConfig.privacyPolicy,
+                          url: 'https://docs.google.com/document/d/1Y-WYTg-5d7yykd0ttWFp3A0qWLOcozik7IVRVMdX8wM/edit?usp=sharing',
                           title: "Privacy Policy",
                         ),
                       ),
