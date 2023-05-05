@@ -34,7 +34,7 @@ class CheckRestore {
         builder: (BuildContext context) => CupertinoAlertDialog(
           title: const Text('Restore purchase'),
           content: const Text(
-              'Your purchase is not found.\nSupport: https://sites.google.com/view/travlin/support-form'),
+              'Your purchase is not found.\nSupport: https://sites.google.com/view/onretouch/contact-us'),
           actions: [
             CupertinoDialogAction(
               isDefaultAction: true,

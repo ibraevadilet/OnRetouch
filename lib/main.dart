@@ -9,7 +9,7 @@ import 'services/notification_service.dart';
 final scaffoldKey = GlobalKey<ScaffoldMessengerState>();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Apphud.start(apiKey: 'app_bcbWL1h5yAXJYQDrSY3uKQf6Xq7AL8');
+  await Apphud.start(apiKey: 'app_KqEVHrgNVsHxLRauiYtoyksNPLJm4H');
 
   await Firebase.initializeApp(
     options: const FirebaseOptions(

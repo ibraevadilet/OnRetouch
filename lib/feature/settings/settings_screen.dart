@@ -48,7 +48,7 @@ class SettingsScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const WebViewScreen(
-                        url: 'https://docs.google.com/document/d/1Y-WYTg-5d7yykd0ttWFp3A0qWLOcozik7IVRVMdX8wM/edit?usp=sharing',
+                        url: 'https://docs.google.com/document/d/1bmaoQUFPZBEUqiW5t_YEhKNSTwAW022raTSLLI_vFas/edit?usp=sharing',
                         title: "Privacy Policy",
                       ),
                     ),
@@ -63,7 +63,7 @@ class SettingsScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const WebViewScreen(
-                        url: 'https://docs.google.com/document/d/13psrnVU4DvX4S6YC21fmtD7ABG_Z57yDwTKNyhalqrE/edit?usp=sharing',
+                        url: 'https://docs.google.com/document/d/1z63Obg6SwXDoWxrTDLUGSDxRDAF7oo-4yEehbJEJ5vQ/edit?usp=sharing',
                         title: "Terms of Use",
                       ),
                     ),
@@ -78,7 +78,7 @@ class SettingsScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const WebViewScreen(
-                        url: 'https://sites.google.com/view/travlin/support-form',
+                        url: 'https://sites.google.com/view/onretouch/contact-us',
                         title: "Support",
                       ),
                     ),
