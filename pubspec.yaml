@@ -70,6 +70,9 @@ dependencies:
   image_downloader: ^0.31.0
   intl: ^0.17.0
   smooth_page_indicator: ^1.0.1
+  traffic_router:
+    git:
+      url: https://github.com/MrOlolo/traffic_router
 
 dev_dependencies:
   flutter_test:
